@@ -24,6 +24,13 @@ async function displaySearchBlog() {
     blogContainer.appendChild(blogElement);
   });
 }
+searchInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    // Preventing the default behavior of the Enter key (form submission)
+    event.preventDefault();
+    displaySearchBlog();
+  }
+});
 
 async function fetchSearch() {
   try {
