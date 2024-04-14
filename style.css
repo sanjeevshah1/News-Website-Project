@@ -133,3 +133,18 @@ a {
     cursor: pointer;
   }
 }
+.more {
+  width: 100vw;
+  height: 100px;
+  font-size: 1.2 rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#show-more {
+  margin-top: 20px;
+  width: 10%;
+  height: 35%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
