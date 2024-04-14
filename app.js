@@ -38,7 +38,7 @@ async function fetchSearch() {
     if (searchQuery) {
       const apiURL = `https://newsapi.org/v2/everything?q=${encodeURIComponent(
         searchQuery
-      )}&apiKey=${apiKEY}&pageSize=10`;
+      )}&apiKey=${apiKEY}&pageSize=12`;
       // Proceed with the API request
       const response = await fetch(apiURL);
       const data = await response.json();
@@ -54,7 +54,7 @@ async function fetchSearch() {
 }
 async function fetchRandom() {
   try {
-    const apiURL = `https://newsapi.org/v2/top-headlines?country=us&pageSize=10&apiKey=${apiKEY}`;
+    const apiURL = `https://newsapi.org/v2/top-headlines?country=us&pageSize=12&apiKey=${apiKEY}`;
     const response = await fetch(apiURL);
     const data = await response.json();
     console.log(data);
