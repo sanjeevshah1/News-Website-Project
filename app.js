@@ -13,7 +13,7 @@ async function displaySearchBlog() {
     blogElement = document.createElement("div");
     blogElement.classList.add("blog-card");
     blogElement.innerHTML = `
-      <img src = ${article.urlToImage}/>
+      <img src = ${article.urlToImage} alt = ${article.title}/>
       <h2>${article.title}</h2>
       <p>${article.description}</p>
         `;
@@ -74,7 +74,7 @@ const displayBlog = (articles) => {
     blogElement = document.createElement("div");
     blogElement.classList.add("blog-card");
     blogElement.innerHTML = `
-      <img src = ${article.urlToImage}/>
+      <img src = ${article.urlToImage} alt = ${article.title}/>
       <h2>${article.title}</h2>
       <p>${article.description}</p>
         `;
