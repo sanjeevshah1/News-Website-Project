@@ -13,7 +13,7 @@ async function displaySearchBlog() {
     blogElement = document.createElement("div");
     blogElement.classList.add("blog-card");
     blogElement.innerHTML = `
-      <img src = ${article.urlToImage}/>
+      <img src = ${article.urlToImage} alt = ${article.title}/>
       <h2>${article.title}</h2>
       <p>${article.description}</p>
         `;
@@ -26,17 +26,25 @@ async function displaySearchBlog() {
 }
 searchInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
+<<<<<<< HEAD
+=======
+    // Preventing the default behavior of the Enter key (form submission)
+>>>>>>> 03afa48883ba0adad21e7a51e265402fca50f5e9
     event.preventDefault();
     displaySearchBlog();
   }
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 03afa48883ba0adad21e7a51e265402fca50f5e9
 async function fetchSearch() {
   try {
     const searchQuery = searchInput.value.trim();
     if (searchQuery) {
       const apiURL = `https://newsapi.org/v2/everything?q=${encodeURIComponent(
         searchQuery
-      )}&apiKey=${apiKEY}&pageSize=10`;
+      )}&apiKey=${apiKEY}&pageSize=12`;
       // Proceed with the API request
       const response = await fetch(apiURL);
       const data = await response.json();
@@ -52,7 +60,7 @@ async function fetchSearch() {
 }
 async function fetchRandom() {
   try {
-    const apiURL = `https://newsapi.org/v2/top-headlines?country=us&pageSize=10&apiKey=${apiKEY}`;
+    const apiURL = `https://newsapi.org/v2/top-headlines?country=us&pageSize=12&apiKey=${apiKEY}`;
     const response = await fetch(apiURL);
     const data = await response.json();
     console.log(data);
@@ -79,7 +87,7 @@ const displayBlog = (articles) => {
     blogElement = document.createElement("div");
     blogElement.classList.add("blog-card");
     blogElement.innerHTML = `
-      <img src = ${article.urlToImage}/>
+      <img src = ${article.urlToImage} alt = ${article.title}/>
       <h2>${article.title}</h2>
       <p>${article.description}</p>
         `;
