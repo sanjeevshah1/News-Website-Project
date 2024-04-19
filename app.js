@@ -24,7 +24,12 @@ async function displaySearchBlog() {
     blogContainer.appendChild(blogElement);
   });
 }
-
+searchInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    displaySearchBlog();
+  }
+});
 async function fetchSearch() {
   try {
     const searchQuery = searchInput.value.trim();
